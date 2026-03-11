@@ -35,6 +35,13 @@ const css = `
         0%,  100% { opacity: 0;   transform: scale(0.4); }
         50%        { opacity: 1;   transform: scale(1);   }
     }
+    @keyframes tool-cycle {
+        0%   { opacity: 0;   transform: scale(0.55) rotate(-20deg); }
+        10%  { opacity: 1;   transform: scale(1)    rotate(0deg);   }
+        28%  { opacity: 1;   transform: scale(1)    rotate(0deg);   }
+        38%  { opacity: 0;   transform: scale(0.55) rotate(20deg);  }
+        100% { opacity: 0;   transform: scale(0.55) rotate(-20deg); }
+    }
 `;
 
 export default function HardHatAnimation() {
@@ -204,19 +211,44 @@ export default function HardHatAnimation() {
                         {/* ── Front badge plate ── */}
                         <rect x="87" y="78" width="56" height="28" rx="7" fill="url(#ff-badge)" opacity="0.82" />
 
-                        {/* ── "FF" lettering on badge ── */}
-                        <text
-                            x="115"
-                            y="98"
-                            textAnchor="middle"
-                            fontFamily="'Inter', ui-sans-serif, sans-serif"
-                            fontWeight="800"
-                            fontSize="15"
-                            letterSpacing="1"
-                            fill="#FDE68A"
-                        >
-                            FF
-                        </text>
+                        {/* ── Animated tool icons on badge ── */}
+
+                        {/* Wrench — first in cycle */}
+                        <g style={{
+                            transformBox: 'fill-box',
+                            transformOrigin: 'center',
+                            animation: 'tool-cycle 6s ease-in-out infinite',
+                            animationDelay: '0s',
+                        }}>
+                            <svg x="106" y="83" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FDE68A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </g>
+
+                        {/* Bolt/Lightning — second in cycle */}
+                        <g style={{
+                            transformBox: 'fill-box',
+                            transformOrigin: 'center',
+                            animation: 'tool-cycle 6s ease-in-out infinite',
+                            animationDelay: '-2s',
+                        }}>
+                            <svg x="108" y="83" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FDE68A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </g>
+
+                        {/* Gear/Settings — third in cycle */}
+                        <g style={{
+                            transformBox: 'fill-box',
+                            transformOrigin: 'center',
+                            animation: 'tool-cycle 6s ease-in-out infinite',
+                            animationDelay: '-4s',
+                        }}>
+                            <svg x="106" y="83" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FDE68A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </g>
 
                         {/* ── Inner sweat band (thin strip at brim line) ── */}
                         <path

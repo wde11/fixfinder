@@ -10,12 +10,13 @@
             'Segoe UI Symbol', 'Noto Color Emoji';
 
     /* FixFinder Brand Colors — Construction Theme */
-    --color-primary:       #B45309;  /* amber-700 */
+    --color-primary:       #f18701;  /* orange */
     --color-primary-dark:  #92400E;  /* amber-800 */
     --color-primary-light: #FEF3C7;  /* amber-50  */
     --color-accent:        #EA580C;  /* orange-600 – safety orange */
     --color-accent-dark:   #C2410C;  /* orange-700 */
-    --color-dark:          #1C1917;  /* stone-900  */
+    --color-dark:          #272d2d;  /* stone-900  */
+    --color-darker:        #1c110a;  /* deep brown */
     --color-body:          #44403C;  /* stone-700  */
     --color-muted:         #78716C;  /* stone-500  */
     --color-surface:       #FAFAF9;  /* stone-50   */

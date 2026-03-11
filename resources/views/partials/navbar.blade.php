@@ -9,26 +9,23 @@
 
             {{-- Logo --}}
             <a href="#home" class="flex items-center gap-3 group">
-                {{-- Logo placeholder: replace this img tag with your actual logo --}}
-                <div class="w-10 h-10 bg-amber-700 rounded-lg flex items-center justify-center text-white font-bold text-lg select-none">
-                    FF
-                </div>
-                <span class="text-xl font-bold text-stone-900 tracking-tight">Fix<span class="text-amber-700">Finder</span></span>
+                <img src="{{ Vite::asset('resources/images/fixfinderlogo.png') }}" alt="FixFinder Logo" class="w-16 h-16 object-contain">
+                <span class="text-xl font-bold text-stone-900 tracking-tight">Fix<span class="text-primary">Finder</span></span>
             </a>
 
             {{-- Desktop Navigation (right-aligned) --}}
             <div class="hidden md:flex items-center gap-8">
-                <a href="#home"            class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Home</a>
-                <a href="#about"           class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">About</a>
-                <a href="#solutions"       class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Solutions</a>
-                <a href="#vision-mission"  class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Vision &amp; Mission</a>
-                <a href="#team"            class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Team</a>
+                <a href="#home"            class="nav-link text-sm font-medium text-stone-700 hover:text-primary">Home</a>
+                <a href="#about"           class="nav-link text-sm font-medium text-stone-700 hover:text-primary">About</a>
+                <a href="#solutions"       class="nav-link text-sm font-medium text-stone-700 hover:text-primary">Solutions</a>
+                <a href="#vision-mission"  class="nav-link text-sm font-medium text-stone-700 hover:text-primary">Vision &amp; Mission</a>
+                <a href="#team"            class="nav-link text-sm font-medium text-stone-700 hover:text-primary">Team</a>
             </div>
 
             {{-- Mobile Menu Button --}}
             <button
                 @click="open = !open"
-                class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+                class="md:hidden p-2 text-gray-600 hover:bg-gray-100 transition-colors"
                 aria-label="Toggle menu"
             >
                 <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,11 +51,11 @@
         class="md:hidden border-t border-gray-100 bg-white shadow-lg"
     >
         <div class="px-4 py-3 flex flex-col gap-1">
-            <a href="#home"           @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Home</a>
-            <a href="#about"          @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">About</a>
-            <a href="#solutions"      @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Solutions</a>
-            <a href="#vision-mission" @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Vision &amp; Mission</a>
-            <a href="#team"           @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Team</a>
+            <a href="#home"           @click="open=false" class="block px-3 py-2.5 text-sm font-medium text-stone-700 hover:bg-primary-light hover:text-primary transition-colors">Home</a>
+            <a href="#about"          @click="open=false" class="block px-3 py-2.5 text-sm font-medium text-stone-700 hover:bg-primary-light hover:text-primary transition-colors">About</a>
+            <a href="#solutions"      @click="open=false" class="block px-3 py-2.5 text-sm font-medium text-stone-700 hover:bg-primary-light hover:text-primary transition-colors">Solutions</a>
+            <a href="#vision-mission" @click="open=false" class="block px-3 py-2.5 text-sm font-medium text-stone-700 hover:bg-primary-light hover:text-primary transition-colors">Vision &amp; Mission</a>
+            <a href="#team"           @click="open=false" class="block px-3 py-2.5 text-sm font-medium text-stone-700 hover:bg-primary-light hover:text-primary transition-colors">Team</a>
 
         </div>
     </div>

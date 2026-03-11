@@ -15,23 +15,23 @@
             <div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 leading-tight mb-6">
                     Find the Fix.<br/>
-                    <span class="text-amber-700">Fast &amp; Reliable.</span>
+                    <span class="text-primary">Fast &amp; Reliable.</span>
                 </h1>
 
-                <p class="text-lg text-stone-500 leading-relaxed mb-8 max-w-lg">
+                <p class="text-lg text-stone-500 leading-relaxed mb-8 max-w-lg text-justify">
                     FixFinder connects you with skilled professionals to solve your home, business, and tech problems — quickly, affordably, and without the hassle.
                 </p>
 
                 <div class="flex flex-wrap gap-4">
                     <a href="#solutions"
-                       class="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-800 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200">
+                       class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-3.5 transition-colors duration-200">
                         Explore Solutions
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
                     <a href="#about"
-                       class="inline-flex items-center gap-2 border-2 border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-700 font-semibold px-7 py-3.5 rounded-lg transition-colors duration-200">
+                       class="inline-flex items-center gap-2 border-2 border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-700 font-semibold px-7 py-3.5 transition-colors duration-200">
                         Learn More
                     </a>
                 </div>
@@ -61,12 +61,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide">About Us</span>
+            <span class="inline-block bg-primary-light text-primary text-xs font-semibold px-3 py-1.5 mb-4 uppercase tracking-wide">About Us</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 mb-4">
-                Who is <span class="text-amber-700">FixFinder</span>?
+                Who is <span class="text-primary">FixFinder</span>?
             </h2>
-            <p class="text-stone-500 text-base leading-relaxed">
-                We are a technology-driven platform that bridges the gap between customers and qualified service professionals — making repairs and solutions accessible to everyone.
+            <p class="text-stone-500 text-base leading-relaxed text-justify">
+                We are a technology-driven platform that bridges the gap between homeowners and qualified service professionals — making repairs and solutions accessible to everyone.
             </p>
         </div>
 
@@ -74,11 +74,11 @@
 
             <div>
                 <h3 class="text-2xl font-bold text-stone-900 mb-4">Our Story</h3>
-                <p class="text-stone-500 leading-relaxed mb-4">
+                <p class="text-stone-500 leading-relaxed mb-4 text-justify">
                     FixFinder was born out of frustration — the kind every homeowner and business owner knows: waiting days for a technician, overpaying for mediocre service, and never knowing who's really showing up at your door.
                 </p>
-                <p class="text-stone-500 leading-relaxed mb-6">
-                    Our founders set out to build a smarter, safer, and more transparent platform where verified professionals meet customers who need help — right now, not next week. FixFinder is currently in development with a growing network of skilled experts.
+                <p class="text-stone-500 leading-relaxed mb-6 text-justify">
+                    Our founders set out to build a smarter, safer, and more transparent platform where verified professionals meet homeowners who need help — right now, not next week. FixFinder is currently in development with a growing network of skilled experts.
                 </p>
                 <ul class="space-y-3">
                     @foreach ([
@@ -88,7 +88,7 @@
                         'Available 7 days a week, including holidays',
                     ] as $point)
                     <li class="flex items-start gap-3">
-                        <div class="w-5 h-5 bg-amber-700 rounded-full flex items-center justify-center mt-0.5 shrink-0">
+                        <div class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mt-0.5 shrink-0">
                             <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                             </svg>
@@ -97,6 +97,11 @@
                     </li>
                     @endforeach
                 </ul>
+            </div>
+
+            {{-- Right: About animation --}}
+            <div class="hidden lg:flex items-center justify-center">
+                <div id="about-animation"></div>
             </div>
 
         </div>
@@ -111,11 +116,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide">Our Solutions</span>
+            <span class="inline-block bg-primary-light text-primary text-xs font-semibold px-3 py-1.5 mb-4 uppercase tracking-wide">Our Solutions</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 mb-4">
-                What We <span class="text-amber-700">Fix</span> For You
+                What We <span class="text-primary">Fix</span> For You
             </h2>
-            <p class="text-stone-500 text-base leading-relaxed">
+            <p class="text-stone-500 text-base leading-relaxed text-justify">
                 From everyday repairs to complex installations, FixFinder covers every corner of your life and business.
             </p>
         </div>
@@ -133,8 +138,8 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach ($solutions as $solution)
-            <div class="group bg-white border border-stone-200 rounded-2xl p-7 hover:border-amber-300 hover:shadow-lg transition-all duration-200">
-                <div class="w-12 h-12 rounded-xl mb-5 flex items-center justify-center
+            <div class="group bg-white border border-stone-200 p-7 hover:border-amber-300 hover:shadow-lg transition-all duration-200">
+                <div class="w-12 h-12 mb-5 flex items-center justify-center
                     {{ $solution['color'] === 'blue'   ? 'bg-blue-100'   : '' }}
                     {{ $solution['color'] === 'yellow' ? 'bg-yellow-100' : '' }}
                     {{ $solution['color'] === 'cyan'   ? 'bg-cyan-100'   : '' }}
@@ -168,10 +173,10 @@
                     </svg>
                     @endif
                 </div>
-                <h3 class="text-base font-bold text-stone-900 mb-2 group-hover:text-amber-700 transition-colors">{{ $solution['title'] }}</h3>
-                <p class="text-sm text-stone-500 leading-relaxed">{{ $solution['desc'] }}</p>
+                <h3 class="text-base font-bold text-stone-900 mb-2 group-hover:text-primary transition-colors">{{ $solution['title'] }}</h3>
+                <p class="text-sm text-stone-500 leading-relaxed text-justify">{{ $solution['desc'] }}</p>
                 <div class="mt-5 pt-4 border-t border-stone-100">
-                    <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 transition-colors">
+                    <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-dark transition-colors">
                         Learn More
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -182,12 +187,12 @@
             @endforeach
         </div>
 
-        <div class="mt-14 bg-amber-800 rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="mt-14 bg-stone-900 p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
                 <h3 class="text-xl font-bold text-white mb-1">Need something else?</h3>
-                <p class="text-amber-200 text-sm">Tell us your problem and we'll match you with the right expert.</p>
+                <p class="text-primary-light text-sm">Tell us your problem and we'll match you with the right expert.</p>
             </div>
-            <a href="#" class="shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors">
+            <a href="#" class="shrink-0 inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-7 py-3.5 transition-colors">
                 Request a Custom Fix
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -206,11 +211,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide">Vision &amp; Mission</span>
+            <span class="inline-block bg-primary-light text-primary text-xs font-semibold px-3 py-1.5 mb-4 uppercase tracking-wide">Vision &amp; Mission</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 mb-4">
-                What <span class="text-amber-700">Drives</span> Us
+                What <span class="text-primary">Drives</span> Us
             </h2>
-            <p class="text-stone-500 text-base leading-relaxed">
+            <p class="text-stone-500 text-base leading-relaxed text-justify">
                 Our vision and mission guide every decision we make — from the professionals we onboard to the features we build.
             </p>
         </div>
@@ -218,29 +223,29 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
 
             {{-- Vision --}}
-            <div class="bg-amber-800 rounded-2xl p-8 sm:p-10 text-white">
-                <div class="w-14 h-14 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-stone-50 border border-stone-200 p-8 sm:p-10 shadow-sm">
+                <div class="w-14 h-14 bg-orange-100 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-extrabold mb-4">Our Vision</h3>
-                <p class="text-amber-100 leading-relaxed text-base">
-                    To become the most trusted and accessible service platform in Southeast Asia — a world where no problem goes unfixed, and every skilled professional has the opportunity to thrive.
+                <h3 class="text-2xl font-extrabold text-stone-900 mb-4">Our Vision</h3>
+                <p class="text-stone-500 leading-relaxed text-base text-justify">
+                    To become the most trusted and accessible service platform in Davao City — a place where no problem goes unfixed, and every skilled professional has the opportunity to thrive.
                 </p>
             </div>
 
             {{-- Mission --}}
-            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-8 sm:p-10 shadow-sm">
-                <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-stone-50 border border-stone-200 p-8 sm:p-10 shadow-sm">
+                <div class="w-14 h-14 bg-orange-100 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
                     </svg>
                 </div>
                 <h3 class="text-2xl font-extrabold text-stone-900 mb-4">Our Mission</h3>
-                <p class="text-stone-500 leading-relaxed text-base mb-6">
-                    To simplify the way people access professional services by building a safe, transparent, and technology-powered platform that connects skilled professionals with customers in need — faster and more reliably than ever before.
+                <p class="text-stone-500 leading-relaxed text-base mb-6 text-justify">
+                    To simplify the way people access professional services by building a safe, transparent, and technology-powered platform that connects skilled professionals with homeowners in need — faster and more reliably than ever before.
                 </p>
                 <ul class="space-y-3">
                     @foreach ([
@@ -249,7 +254,7 @@
                         'Build a culture of trust, speed, and quality',
                     ] as $item)
                     <li class="flex items-start gap-3">
-                        <div class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mt-0.5 shrink-0">
+                        <div class="w-5 h-5 bg-accent rounded-full flex items-center justify-center mt-0.5 shrink-0">
                             <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                             </svg>
@@ -267,12 +272,12 @@
             <h3 class="text-center text-xl font-bold text-gray-900 mb-8">Our Core Values</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
                 @foreach ([
-                    ['label' => 'Integrity',     'desc' => 'We act with honesty in every interaction.',    'bg' => 'bg-amber-800',  'text' => 'text-white'],
-                    ['label' => 'Excellence',    'desc' => 'We hold every job to the highest standard.',   'bg' => 'bg-stone-900',  'text' => 'text-white'],
-                    ['label' => 'Speed',         'desc' => 'We respect your time and move with urgency.',  'bg' => 'bg-orange-500', 'text' => 'text-white'],
-                    ['label' => 'Accessibility', 'desc' => 'Quality service should be for everyone.',      'bg' => 'bg-stone-100',  'text' => 'text-stone-900'],
+                    ['label' => 'Integrity',     'desc' => 'We act with honesty in every interaction.',   'bg' => 'bg-primary-dark', 'text' => 'text-white'],
+                    ['label' => 'Excellence',    'desc' => 'We hold every job to the highest standard.',  'bg' => 'bg-stone-800',    'text' => 'text-white'],
+                    ['label' => 'Speed',         'desc' => 'We respect your time and move with urgency.', 'bg' => 'bg-accent',       'text' => 'text-white'],
+                    ['label' => 'Accessibility', 'desc' => 'Quality service should be for everyone.',     'bg' => 'bg-stone-600',    'text' => 'text-white'],
                 ] as $value)
-                <div class="{{ $value['bg'] }} {{ $value['text'] }} rounded-2xl p-6 text-center">
+                <div class="{{ $value['bg'] }} {{ $value['text'] }} p-6 text-center">
                     <h4 class="font-bold text-lg mb-2">{{ $value['label'] }}</h4>
                     <p class="text-xs leading-relaxed opacity-80">{{ $value['desc'] }}</p>
                 </div>
@@ -291,44 +296,49 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide">Our Team</span>
+            <span class="inline-block bg-primary-light text-primary text-xs font-semibold px-3 py-1.5 mb-4 uppercase tracking-wide">Our Team</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 mb-4">
-                Meet the <span class="text-amber-700">People</span> Behind FixFinder
+                Meet the <span class="text-primary">People</span> Behind FixFinder
             </h2>
-            <p class="text-stone-500 text-base leading-relaxed">
+            <p class="text-stone-500 text-base leading-relaxed text-justify">
                 A dedicated team of builders, operators, and problem-solvers working every day to make FixFinder the best in its class.
             </p>
         </div>
 
         @php
         $team = [
-            ['name' => 'Maria Santos',  'role' => 'Chief Executive Officer',  'initials' => 'MS', 'bio' => 'Serial entrepreneur with 12+ years in operations and tech startups across Southeast Asia.', 'color' => 'bg-amber-800'],
-            ['name' => 'Carlos Reyes',  'role' => 'Chief Technology Officer',  'initials' => 'CR', 'bio' => 'Full-stack engineer and platform architect. Built scalable systems at Fortune 500 companies.', 'color' => 'bg-stone-800'],
-            ['name' => 'Anna Lim',      'role' => 'Head of Operations',        'initials' => 'AL', 'bio' => 'Operations expert who ensures every service delivery meets FixFinder\'s quality promise.', 'color' => 'bg-orange-600'],
-            ['name' => 'David Cruz',    'role' => 'Head of Growth',            'initials' => 'DC', 'bio' => 'Growth strategist with extensive experience in marketplace and platform businesses.', 'color' => 'bg-stone-600'],
+            ['name' => 'Justin Philip H. Aurelio', 'role' => 'Chief Executive Officer',  'initials' => 'JA', 'photo' => 'justin.jpg',  'bio' => 'Vision, team coordination, final decision-making, and pitching.',                                                              'color' => 'bg-primary-dark'],
+            ['name' => 'Renz Xaviery O. Pastrana', 'role' => 'Chief Technology Officer',  'initials' => 'RP', 'photo' => 'renz.jpg',    'bio' => 'Technical feasibility, software/hardware architecture, and UIC Server deployment.',                                          'color' => 'bg-stone-800'],
+            ['name' => 'Troy Wendell G. Peralta',  'role' => 'Chief Marketing Officer',   'initials' => 'TP', 'photo' => 'troy.jpg',    'bio' => 'User research, field work, customer validation, and UI/UX feedback.',                                                       'color' => 'bg-accent'],
+            ['name' => 'Wam B. Ausan',             'role' => 'IP & Admin',                'initials' => 'WA', 'photo' => null,          'bio' => 'IP Disclosure logs, financial feasibility, and Weekly Progress Report (WPR) compliance.',                                    'color' => 'bg-stone-600'],
         ];
         @endphp
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach ($team as $member)
-            <div class="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-200">
+            <div class="group bg-white border border-stone-200 overflow-hidden hover:shadow-lg transition-all duration-200">
                 <div class="{{ $member['color'] }} h-36 flex items-center justify-center">
-                    {{-- Replace this div with an <img> tag when you have team photos --}}
-                    <div class="w-20 h-20 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-white text-2xl font-extrabold tracking-wide">
-                        {{ $member['initials'] }}
-                    </div>
+                    @if($member['photo'])
+                        <img src="{{ Vite::asset('resources/images/' . $member['photo']) }}"
+                             alt="{{ $member['name'] }}"
+                             class="w-20 h-20 rounded-full object-cover object-top ring-2 ring-white/30">
+                    @else
+                        <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-white text-2xl font-extrabold tracking-wide">
+                            {{ $member['initials'] }}
+                        </div>
+                    @endif
                 </div>
                 <div class="p-6">
                     <h4 class="font-bold text-stone-900 text-base">{{ $member['name'] }}</h4>
-                    <p class="text-xs font-medium text-amber-700 mt-0.5 mb-3">{{ $member['role'] }}</p>
-                    <p class="text-xs text-stone-500 leading-relaxed mb-4">{{ $member['bio'] }}</p>
+                    <p class="text-xs font-medium text-primary mt-0.5 mb-3">{{ $member['role'] }}</p>
+                    <p class="text-xs text-stone-500 leading-relaxed mb-4 text-justify">{{ $member['bio'] }}</p>
                     <div class="flex items-center gap-2 pt-3 border-t border-stone-100">
-                        <a href="#" class="w-7 h-7 bg-stone-100 hover:bg-amber-700 hover:text-white rounded-lg flex items-center justify-center transition-colors text-stone-600" aria-label="LinkedIn">
+                        <a href="#" class="w-7 h-7 bg-stone-100 hover:bg-amber-700 hover:text-white flex items-center justify-center transition-colors text-stone-600" aria-label="LinkedIn">
                             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
                             </svg>
                         </a>
-                        <a href="#" class="w-7 h-7 bg-stone-100 hover:bg-stone-600 hover:text-white rounded-lg flex items-center justify-center transition-colors text-stone-600" aria-label="Twitter">
+                        <a href="#" class="w-7 h-7 bg-stone-100 hover:bg-stone-600 hover:text-white flex items-center justify-center transition-colors text-stone-600" aria-label="Twitter">
                             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                                 <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016 2a4.48 4.48 0 00-4.48 4.48 4.6 4.6 0 00.12 1.02A12.73 12.73 0 013 3.19a4.48 4.48 0 001.39 5.99 4.45 4.45 0 01-2.03-.56v.06a4.48 4.48 0 003.59 4.39 4.5 4.5 0 01-2.02.08 4.48 4.48 0 004.18 3.11A9 9 0 012 19.54a12.73 12.73 0 006.88 2.02c8.27 0 12.79-6.85 12.79-12.79 0-.19 0-.39-.01-.58A9.14 9.14 0 0023 6.07a8.93 8.93 0 01-2.6.71A4.52 4.52 0 0023 3z"/>
                             </svg>
@@ -341,7 +351,7 @@
 
         <div class="mt-14 text-center">
             <p class="text-stone-500 mb-4">Want to join the team? We're always looking for talented people.</p>
-            <a href="#" class="inline-flex items-center gap-2 border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-semibold px-7 py-3 rounded-lg transition-colors duration-200">
+            <a href="#" class="inline-flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-7 py-3 transition-colors duration-200">
                 View Open Positions
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -361,17 +371,17 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             Ready to Find Your Fix?
         </h2>
-        <p class="text-stone-400 text-base mb-8 max-w-xl mx-auto">
+        <p class="text-stone-400 text-base mb-8 max-w-xl mx-auto text-justify">
             FixFinder is being built to connect you with skilled professionals for fast, reliable service. Stay tuned for our launch.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="#solutions" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors">
+            <a href="#solutions" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-8 py-3.5 transition-colors">
                 Explore Solutions
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
-            <a href="#about" class="inline-flex items-center gap-2 bg-white bg-opacity-10 hover:bg-opacity-20 border border-white border-opacity-30 text-black font-semibold px-8 py-3.5 rounded-lg transition-colors">
+            <a href="#about" class="inline-flex items-center gap-2 bg-white bg-opacity-10 hover:bg-opacity-20 border border-white border-opacity-30 text-black font-semibold px-8 py-3.5 transition-colors">
                 Learn More About Us
             </a>
         </div>
