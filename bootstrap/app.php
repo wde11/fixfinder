@@ -7,6 +7,28 @@ use Illuminate\Foundation\Configuration\Middleware;
 // On Vercel the deployed filesystem is read-only; redirect all writable
 // Laravel storage to /tmp which is always writable at runtime.
 if (isset($_SERVER['VERCEL']) || getenv('VERCEL')) {
+
+    // Force critical config values that must NOT fall back to DB/file defaults.
+    // This runs before Laravel loads config files, so these values win.
+    $forceEnv = [
+        'APP_MAINTENANCE_DRIVER' => 'file',
+        'CACHE_STORE'            => 'array',
+        'SESSION_DRIVER'         => 'cookie',
+        'QUEUE_CONNECTION'       => 'sync',
+        'LOG_CHANNEL'            => 'stderr',
+        'LOG_LEVEL'              => 'error',
+        'DB_CONNECTION'          => 'sqlite',
+        'FILESYSTEM_DISK'        => 'local',
+        'BROADCAST_CONNECTION'   => 'log',
+        'MAIL_MAILER'            => 'log',
+    ];
+    foreach ($forceEnv as $key => $value) {
+        putenv("$key=$value");
+        $_ENV[$key]    = $value;
+        $_SERVER[$key] = $value;
+    }
+
+    // Create writable directories under /tmp
     $tmpStorage = '/tmp/laravel-storage';
     foreach ([
         'app/private',
