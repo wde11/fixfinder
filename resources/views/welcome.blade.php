@@ -371,7 +371,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
-            <a href="#about" class="inline-flex items-center gap-2 bg-white bg-opacity-10 hover:bg-opacity-20 border border-white border-opacity-30 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors">
+            <a href="#about" class="inline-flex items-center gap-2 bg-white bg-opacity-10 hover:bg-opacity-20 border border-white border-opacity-30 text-black font-semibold px-8 py-3.5 rounded-lg transition-colors">
                 Learn More About Us
             </a>
         </div>
