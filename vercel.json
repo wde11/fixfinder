@@ -6,14 +6,6 @@
         {
             "src": "public/index.php",
             "use": "vercel-php@0.7.1"
-        },
-        {
-            "src": "public/build/**",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "public/robots.txt",
-            "use": "@vercel/static"
         }
     ],
     "env": {
@@ -35,18 +27,6 @@
         "MAIL_MAILER": "log"
     },
     "routes": [
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
-        },
-        {
-            "src": "/images/(.*)",
-            "dest": "/public/images/$1"
-        },
-        {
-            "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|ico|svg|woff2?)$)",
-            "dest": "/public/$1"
-        },
         {
             "src": "/(.*)",
             "dest": "/public/index.php"
