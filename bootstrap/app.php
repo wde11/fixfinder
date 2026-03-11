@@ -16,12 +16,13 @@ $readOnly = !is_writable($bootstrapDir . '/cache')
 if ($readOnly) {
     // Force critical config values before Laravel loads config files.
     $forceEnv = [
+        'APP_DEBUG'              => 'true',   // temporary: remove once site loads
         'APP_MAINTENANCE_DRIVER' => 'file',
         'CACHE_STORE'            => 'array',
         'SESSION_DRIVER'         => 'cookie',
         'QUEUE_CONNECTION'       => 'sync',
         'LOG_CHANNEL'            => 'stderr',
-        'LOG_LEVEL'              => 'error',
+        'LOG_LEVEL'              => 'debug',
         'DB_CONNECTION'          => 'sqlite',
         'FILESYSTEM_DISK'        => 'local',
         'BROADCAST_CONNECTION'   => 'log',

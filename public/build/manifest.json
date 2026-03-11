@@ -1,0 +1,41 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DiXqF1kA.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/images/fixfinderlogo.png": {
+    "file": "assets/fixfinderlogo-73Y4cC9W.png",
+    "src": "resources/images/fixfinderlogo.png"
+  },
+  "resources/images/fixfinderlogo_white.png": {
+    "file": "assets/fixfinderlogo_white-tSt4Q6Yp.png",
+    "src": "resources/images/fixfinderlogo_white.png"
+  },
+  "resources/images/fixfinderlogo_white_v2.png": {
+    "file": "assets/fixfinderlogo_white_v2-R8nFG4vU.png",
+    "src": "resources/images/fixfinderlogo_white_v2.png"
+  },
+  "resources/images/justin.jpg": {
+    "file": "assets/justin-DPhZi8Rq.jpg",
+    "src": "resources/images/justin.jpg"
+  },
+  "resources/images/renz.jpg": {
+    "file": "assets/renz-Lz49LQbj.jpg",
+    "src": "resources/images/renz.jpg"
+  },
+  "resources/images/troy.jpg": {
+    "file": "assets/troy-iCRmeqJQ.jpg",
+    "src": "resources/images/troy.jpg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CZC6Zare.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
