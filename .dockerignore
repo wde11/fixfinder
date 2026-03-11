@@ -1,0 +1,17 @@
+.git
+.gitignore
+.env
+node_modules
+public/build
+storage/logs
+storage/framework/cache
+storage/framework/sessions
+storage/framework/views
+tests
+README.md
+*.md
+Dockerfile
+docker/
+firebase.json
+.firebaserc
+.dockerignore
