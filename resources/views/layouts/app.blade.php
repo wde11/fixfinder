@@ -6,6 +6,9 @@
     <meta name="description" content="FixFinder — Your trusted partner for fast, reliable, and professional solutions."/>
     <title>@yield('title', 'FixFinder — Find the Fix. Fast.')</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ Vite::asset('resources/images/fixfinderlogo_white_v2.png') }}">
+
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
