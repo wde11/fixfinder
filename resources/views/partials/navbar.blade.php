@@ -10,29 +10,19 @@
             {{-- Logo --}}
             <a href="#home" class="flex items-center gap-3 group">
                 {{-- Logo placeholder: replace this img tag with your actual logo --}}
-                <div class="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-lg select-none">
+                <div class="w-10 h-10 bg-amber-700 rounded-lg flex items-center justify-center text-white font-bold text-lg select-none">
                     FF
                 </div>
-                <span class="text-xl font-bold text-gray-900 tracking-tight">Fix<span class="text-blue-700">Finder</span></span>
+                <span class="text-xl font-bold text-stone-900 tracking-tight">Fix<span class="text-amber-700">Finder</span></span>
             </a>
 
-            {{-- Desktop Navigation --}}
+            {{-- Desktop Navigation (right-aligned) --}}
             <div class="hidden md:flex items-center gap-8">
-                <a href="#home"            class="nav-link text-sm font-medium text-gray-700 hover:text-blue-700">Home</a>
-                <a href="#about"           class="nav-link text-sm font-medium text-gray-700 hover:text-blue-700">About</a>
-                <a href="#solutions"       class="nav-link text-sm font-medium text-gray-700 hover:text-blue-700">Solutions</a>
-                <a href="#vision-mission"  class="nav-link text-sm font-medium text-gray-700 hover:text-blue-700">Vision &amp; Mission</a>
-                <a href="#team"            class="nav-link text-sm font-medium text-gray-700 hover:text-blue-700">Team</a>
-            </div>
-
-            {{-- CTA Button --}}
-            <div class="hidden md:block">
-                <a href="#solutions" class="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
-                    Get Started
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+                <a href="#home"            class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Home</a>
+                <a href="#about"           class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">About</a>
+                <a href="#solutions"       class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Solutions</a>
+                <a href="#vision-mission"  class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Vision &amp; Mission</a>
+                <a href="#team"            class="nav-link text-sm font-medium text-stone-700 hover:text-amber-700">Team</a>
             </div>
 
             {{-- Mobile Menu Button --}}
@@ -64,16 +54,12 @@
         class="md:hidden border-t border-gray-100 bg-white shadow-lg"
     >
         <div class="px-4 py-3 flex flex-col gap-1">
-            <a href="#home"           @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">Home</a>
-            <a href="#about"          @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">About</a>
-            <a href="#solutions"      @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">Solutions</a>
-            <a href="#vision-mission" @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">Vision &amp; Mission</a>
-            <a href="#team"           @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">Team</a>
-            <div class="pt-2 border-t border-gray-100 mt-1">
-                <a href="#solutions" @click="open=false" class="block w-full text-center bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors">
-                    Get Started
-                </a>
-            </div>
+            <a href="#home"           @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Home</a>
+            <a href="#about"          @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">About</a>
+            <a href="#solutions"      @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Solutions</a>
+            <a href="#vision-mission" @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Vision &amp; Mission</a>
+            <a href="#team"           @click="open=false" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">Team</a>
+
         </div>
     </div>
 </nav>
