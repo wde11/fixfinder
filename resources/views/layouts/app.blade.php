@@ -7,7 +7,7 @@
     <title>@yield('title', 'FixFinder — Find the Fix. Fast.')</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ Vite::asset('resources/images/fixfinderlogo_white_v2.png') }}">
+    <link rel="icon" type="image/png" href="{{ Vite::asset('resources/images/fixfinderlogo_white.png') }}">
 
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
