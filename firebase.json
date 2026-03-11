@@ -1,5 +1,6 @@
 {
     "hosting": {
+        "site": "fixfinder",
         "public": "public",
         "ignore": [
             "firebase.json",
@@ -8,14 +9,7 @@
             "index.php",
             ".htaccess"
         ],
-        "rewrites": [
-            {
-                "source": "**",
-                "run": {
-                    "serviceId": "fixfinder",
-                    "region": "us-central1"
-                }
-            }
-        ]
+        "cleanUrls": true,
+        "trailingSlash": false
     }
 }
