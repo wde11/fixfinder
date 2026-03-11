@@ -21,6 +21,12 @@ if (isset($_SERVER['VERCEL']) || getenv('VERCEL')) {
             mkdir($path, 0755, true);
         }
     }
+
+    // bootstrap/cache (services.php, packages.php) also needs to be writable
+    $tmpBootstrap = '/tmp/laravel-bootstrap';
+    if (!is_dir($tmpBootstrap . '/cache')) {
+        mkdir($tmpBootstrap . '/cache', 0755, true);
+    }
 }
 
 $app = Application::configure(basePath: dirname(__DIR__))
@@ -36,9 +42,10 @@ $app = Application::configure(basePath: dirname(__DIR__))
         //
     })->create();
 
-// Apply the /tmp storage path after the app is created.
+// Apply the /tmp storage and bootstrap paths after the app is created.
 if (isset($tmpStorage)) {
     $app->useStoragePath($tmpStorage);
+    $app->useBootstrapPath($tmpBootstrap);
 }
 
 return $app;
