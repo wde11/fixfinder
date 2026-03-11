@@ -4,12 +4,17 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
-// On Vercel the deployed filesystem is read-only; redirect all writable
-// Laravel storage to /tmp which is always writable at runtime.
-if (isset($_SERVER['VERCEL']) || getenv('VERCEL')) {
+$bootstrapDir = __DIR__;
+$tmpStorage   = null;
+$tmpBootstrap = null;
 
-    // Force critical config values that must NOT fall back to DB/file defaults.
-    // This runs before Laravel loads config files, so these values win.
+// Detect a read-only filesystem (Vercel) by checking actual writability.
+// This is more reliable than checking for the VERCEL env variable.
+$readOnly = !is_writable($bootstrapDir . '/cache')
+         || !is_writable(dirname($bootstrapDir) . '/storage/framework/views');
+
+if ($readOnly) {
+    // Force critical config values before Laravel loads config files.
     $forceEnv = [
         'APP_MAINTENANCE_DRIVER' => 'file',
         'CACHE_STORE'            => 'array',
@@ -28,7 +33,7 @@ if (isset($_SERVER['VERCEL']) || getenv('VERCEL')) {
         $_SERVER[$key] = $value;
     }
 
-    // Create writable directories under /tmp
+    // Redirect storage/ to /tmp
     $tmpStorage = '/tmp/laravel-storage';
     foreach ([
         'app/private',
@@ -44,10 +49,22 @@ if (isset($_SERVER['VERCEL']) || getenv('VERCEL')) {
         }
     }
 
-    // bootstrap/cache (services.php, packages.php) also needs to be writable
+    // Redirect bootstrap/cache/ to /tmp and copy providers.php so
+    // useBootstrapPath() works correctly (it needs providers.php to exist).
     $tmpBootstrap = '/tmp/laravel-bootstrap';
     if (!is_dir($tmpBootstrap . '/cache')) {
         mkdir($tmpBootstrap . '/cache', 0755, true);
+    }
+    if (!file_exists($tmpBootstrap . '/providers.php')) {
+        copy($bootstrapDir . '/providers.php', $tmpBootstrap . '/providers.php');
+    }
+    // Carry over any pre-built cache files from the deployment
+    foreach (['services.php', 'packages.php'] as $f) {
+        $src = $bootstrapDir . '/cache/' . $f;
+        $dst = $tmpBootstrap . '/cache/' . $f;
+        if (file_exists($src) && !file_exists($dst)) {
+            copy($src, $dst);
+        }
     }
 }
 
@@ -64,9 +81,10 @@ $app = Application::configure(basePath: dirname(__DIR__))
         //
     })->create();
 
-// Apply the /tmp storage and bootstrap paths after the app is created.
-if (isset($tmpStorage)) {
+if ($tmpStorage !== null) {
     $app->useStoragePath($tmpStorage);
+}
+if ($tmpBootstrap !== null) {
     $app->useBootstrapPath($tmpBootstrap);
 }
 
